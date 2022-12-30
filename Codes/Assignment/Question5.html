@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      input{
+        background-color: white;
+      }
+      .table1,td,th{
+        border:1px solid black;
+        border-collapse:collapse;
+        background-color: pink;
+      }
+
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <table class="table1" >
+        <tr>
+          <td>
+            <label for="nm">Name</label>
+          </td>
+          <td>
+            <input id="nm" type="text" name="name" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="ec">Employee Code</label>
+          </td>
+          <td>
+            <input id="ec" type="text" name="Emp Code" size="3" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="dept">Department</label>
+          </td>
+          <td>
+            <input id="ADMIN" type="radio" name="dept" />
+            <label for="ADMIN">ADMIN</label>
+            <br />
+            <input type="radio" name="dept" id="HR" />
+            <label for="HR">HR</label>
+            <br />
+            <input type="radio" name="dept" id="TECHNICAL" />
+            <label for="TECHNICAL">TECHNICAL</label>
+            <br />
+            <input type="radio" name="dept" id="ACCOUNT" />
+            <label for="ACCOUNT">ACCOUNT</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="doj">Date of Joining</label>
+          </td>
+          <td>
+            <!-- <input type="date" name="doj" id="doj"> -->
+            <input type="text" name="doj" id="day" size="2" />/
+            <input type="text" name="doj" id="month" size="2" />/
+            <input type="text" name="doj" id="year" size="4" /><br />
+            <label for="day"> &nbsp&nbspdd </label
+            >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <label for="month"> mm </label> &nbsp&nbsp&nbsp&nbsp&nbsp
+            <label for="year">yyyy</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="address">Address</label>
+          </td>
+          <td>
+            <textarea
+              name="address"
+              id="address"
+              rows="3"
+              cols="50"
+              scrolling="yes"
+            >
+            </textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="tp">Training Programmes need to attend</label>
+          </td>
+          <td>
+            <input type="checkbox" name="tp" id="html" />
+            <label for="html">HTML/DHTML</label><br />
+            <input type="checkbox" name="tp" id="java" />
+            <label for="java">JAVA</label><br />
+            <input type="checkbox" name="tp" id="cs" />
+            <label for="cs">CLIENT/SERVER</label><br />
+            <input type="checkbox" name="tp" id="net" /><label for="net"
+              >.NET</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="tp">Training Programmes need to attand</label>
+          </td>
+          <td>
+            <select name="tp" id="tp" size="2" >
+              <option value="JAVASCRIPTJSTRUTS">JAVASCRIPT</option>
+              <option value="JSTRUTS">JSTRUTS</option>
+              <option value="lava">LAVA</option>
+              <option value="victus">Victus</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Send the information at</label>
+          </td>
+          <td><a href="">empinfo@patni.com</a></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

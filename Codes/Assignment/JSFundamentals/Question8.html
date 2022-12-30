@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function numpower() {
+        var number = parseInt(document.getElementById("num").value);
+        var power = parseInt(document.getElementById("pow").value);
+        var num1 = 1;
+        for (var i = 0; i < power; i++) {
+          num1 *= number;
+        }
+        document.write(num1);
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="num1" id="num" /><label for="num">Number</label
+    ><br />
+    <input type="number" name="power1" id="pow" onchange="numpower()" /><label
+      for="pow"
+      >Power</label
+    >
+  </body>
+</html>

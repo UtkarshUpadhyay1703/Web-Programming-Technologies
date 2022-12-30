@@ -1,0 +1,26 @@
+.tableMain,th,td{
+    border:3px solid gray;
+    border-collapse: collapse;
+}
+#ele1,#ele2{
+    background-color: white;
+}
+#row1{
+    column-span:all;
+    background-color:yellow;
+}
+#row2{
+    background-color: rgb(249, 12, 166);
+}
+#element1{
+    background-color:yellow;
+}
+#element26{
+    background-color:yellow;
+}
+td:nth-child(1){
+    background-color: green;
+}
+td:nth-child(7){
+    background-color: rgb(0, 221, 255);
+}

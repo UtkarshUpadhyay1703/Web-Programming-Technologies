@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function validateCity() {
+        // var city1 = document.getElementsByName("city");
+        // document.write(city1[1].value);//these both will give the value of the array of city
+        var city1=document.getElementById("mycity");
+        var pos=city1.selectedIndex;
+        // window.open(_blank).document.write(city1.options[pos].value);
+        var win = window.open("new window");
+        win.document.write(pos + city1.options[pos].value);
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="city" id="mycity">
+      <option name="city" value="Pune">Pune</option>
+      <option name="city" value="Mathura">Mathura</option>
+      <option name="city" value="Mumbai">Mumbai</option>
+      <option name="city" value="Delhi">Delhi</option>
+    </select>
+    <button type="button" name="button1" id="button1" onclick="validateCity()">validate</button>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      #h1 {
+        text-align: center;
+      }
+    </style>
+    <script>
+      function compound() {
+        let principal = parseFloat(document.getElementById("pri").value);
+        let intrest = parseFloat(document.getElementById("rate").value);
+        let period = parseFloat(document.getElementById("period").value);
+        var compoundIntrest = parseFloat(
+          (principal * Math.pow((1 + intrest / 100), period)) - principal);
+          var str1='<hr style="border: 1px dashed black" /><h1 id="h1">********Calculate Compound Intrest********</h1><hr style="border: 1px dashed black" /> <br>'+'Principal = '+principal+'<br><br>intrest = '+intrest+'<br><br>Period = '+period+'<br><br>compoundIntrest = '+compoundIntrest;
+          ( function() {
+            var win= window.open("new window");
+            win.document.write(str1);
+          }) ();
+        
+
+        document.write(Math.round(newrate).toFixed(2));
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <hr style="border: 1px dashed black" />
+    <h1 id="h1">********Calculate Compound Intrest********</h1>
+    <hr style="border: 1px dashed black" />
+    <input type="number" name="pri1" id="pri" />
+    <label for="pri">Enter Principal</label>
+    <input type="number" name="rate1" id="rate" />
+    <label for="rate">Enter Rate of Intrest</label>
+    <input type="number" name="period1" id="period" />
+    <label for="rate">Enter Period</label><br /><br />
+    <input type="number" name="ci1" id="ci" />
+    <button type="button" onclick="compound()">Compound Intrest</button>
+  </body>
+</html>

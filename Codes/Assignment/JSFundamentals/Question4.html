@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function calculation() {
+        var number1 = parseInt(document.getElementById("num1").value);
+        var number2 = parseInt(document.getElementById("num2").value);
+        //  var arr=document.getElementsByName("cal").value;
+        //  for(var j=0;j<arr.length;j++){
+        //     destination.innerHTML+=arr[j];
+        //  }
+        var destination = document.getElementById("mydiv");
+        var arr = document.getElementsByName("cal");
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i].checked) {
+            alert("ope");
+            var operation = arr[i].value;
+          }
+        }
+        switch (operation) {
+          case "+":
+            destination.innerHTML = number1 + number2;
+            break;
+          case "-":
+            destination.innerHTML = number1 - number2;
+            break;
+          case "*":
+            destination.innerHTML = number1 * number2;
+            break;
+          case "/":
+            destination.innerHTML = number1 / number2;
+            break;
+        }
+      }
+      // document.getElementById("")
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="num1" id="num1" /><label for="num1"
+      >Enter first number</label
+    >
+    <input type="number" name="num2" id="num2" /><label for="num2"
+      >Enter second number</label
+    ><br />
+    <input type="radio" name="cal" id="add" value="+" /><label for="add"
+      >Addition</label
+    >
+    <input type="radio" name="cal" id="sub" value="-" /><label for="sub"
+      >Subtraction</label
+    >
+    <input type="radio" name="cal" id="mul" value="*" /><label for="mul"
+      >Multiplication</label
+    >
+    <input type="radio" name="cal" id="div" value="/" /><label for="div"
+      >Division</label
+    ><br />
+    <button type="button" onclick="calculation()">Calculations</button>
+    <div id="mydiv"></div>
+  </body>
+</html>

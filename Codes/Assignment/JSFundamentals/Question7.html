@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function findMin() {
+        var str=document.getElementById("numbers").value;
+        alert(str);
+        var arr=str.split(" ");
+        let i = 0;
+        let minumum = arr[0];
+        while (i <= arr.length) {
+          if (minumum > arr[i]) {
+            minumum = arr[i];
+          }
+          i++;
+        }
+        document.write("Minimum Number = " + minumum);
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="numbers" id="numbers" onblur="findMin()"><label for="numbers">Enter numbers with spaces</label>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="2" width="300px" align="center">
+      <caption>
+        <h2>Employee Details</h2>
+      </caption>
+      <tr>
+        <td>1)</td>
+        <td><label for="ei"> Employee Id:</label></td>
+        <td><input type="text" name="ei" id="ei" size="5" /></td>
+      </tr>
+      <tr>
+        <td>2)</td>
+        <td><label for="en">Employee Name</label></td>
+        <td><input type="text" name="en" id="en" /></td>
+      </tr>
+      <tr>
+        <td>3)</td>
+        <td><label for="dn"> Department Name:</label></td>
+        <td>
+          <select name="dn" id="dept">
+            <option name="dn" id="sw" value="S/W">S/W</option>
+            <option name="dn" id="it" value="I/T">I/T</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>4)</td>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="gen" id="m" /><label for="m">Male</label>
+          <input type="radio" name="gen" id="f" /> <label for="f">Female</label>
+        </td>
+      </tr>
+      <tr>
+        <td>5)</td>
+        <td><label for="add">Address</label></td>
+        <td>
+          <textarea name="address" id="add" rows="5" cols="20"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>6)</td>
+        <td>Skill Topic</td>
+        <td>&nbsp;
+          <input type="checkbox" name="st" id="c" /><label for="c">C</label>&nbsp;
+          <input type="checkbox" name="st" id="c++" /><label for="c++"
+            >C++</label
+          >&nbsp;
+          <input type="checkbox" name="st" id="java" /><label for="java"
+            >Java</label
+          >&nbsp;
+          <input type="checkbox" name="st" id="net" /><label for="net"
+            >.Net</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>7)</td>
+        <td><label for="email">E-mail:</label></td>
+        <td><input type="text" name="email1" id="email"></td>
+      </tr>
+      <tr>
+        <td>8)</td>
+        <td>Birth Date:</td>
+        <td><input type="text" name="day" id="dd" size="2">(DD)/ <input type="text" name="month" id="mm" size="2">(MM)/ <input type="text" name="year" id="yy" size="4">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

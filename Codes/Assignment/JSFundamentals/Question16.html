@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/jquery.js"></script>
+    <script>
+        var arr=[];
+        $(document).ready(function(){
+            $('#site').keypress(function(event){
+                if(event.which==13){
+                    var first=$('#site').val();
+                    arr.push(first);
+                    $('#site').val("");
+                }
+            })
+            var strfinal=""
+            $('#print').click(function(){
+                arr.forEach(ob=>{
+                    var str=ob;
+                    if(str.startsWith("www.")){
+                        strfinal=strfinal+str+"\n"
+                    }
+                });
+                $('#toprint').val("");
+                $('#toprint').val(strfinal);
+            })
+        })
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input name="site1" id="site"><label for="site">Enter Site</label><br><br>
+    <textarea name="toprint" id="toprint" cols="30" rows="10"></textarea>
+    <button id="print" type="button" name="print">To Show</button>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/jquery.js"></script>
+    <script>
+        var arr=[];
+        $(document).ready(function(){
+            $('#site').keypress(function(event){
+                if(event.which==13){
+                    var first=$('#site').val();
+                    arr.push(first);
+                    $('#site').val("");
+                }
+            })
+            $('#print').click(function(){
+                var count=0;
+                arr.forEach(ob=>{
+                    var str=ob;
+                    if(str.startsWith("www.")){
+                        count++;
+                    }
+                });
+                $('#toprint').val("");
+                $('#toprint').val(count);
+            })
+        })
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input name="site1" id="site"><label for="site">Enter Site</label><br><br>
+    <textarea name="toprint" id="toprint" cols="30" rows="10"></textarea>
+    <button id="print" type="button" name="print">To Show</button>
+</body>
+</html>

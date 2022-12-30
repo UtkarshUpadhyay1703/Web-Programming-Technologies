@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./js/jquery.js"></script>
+    <script></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      $(document).ready(function () {
+        // function validategen(){
+        //     alert("validategen")
+        //     var arrgen=$("[name='g1']")
+        //     for(var i=0;i<=1;i++){
+        //         if(arrgen[i].checked){
+        //             alert(arrgen);
+        //         }
+        //     }
+        // }
+        function validatename() {
+          alert("validatename");
+          var nm = $("#name").val();
+          alert(nm);
+          if (nm.trim().length > 0) {
+            alert("trim  " + nm);
+            $("#vnm").val("");
+            return true;
+          } else {
+            $("#vnm").val("Wrong");
+            return false;
+          }
+        }
+        $("#submit").click(function () {
+          alert("Onsubmit");
+          var flag = validatename();
+          // var flag1=validategen();
+          if (flag) {
+            alert("flag true");
+            str =
+              "You entered: \n Name:" +
+              $("#name").val() +
+              "\n Birth Date:" +
+              $("#bd").val() +
+              "\n Email Address:" +
+              $("#ea").val();
+            alert(str);
+            $("#print").val(str);
+            return true;
+          } else {
+            return false;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="form1">
+      <div style="border: 2px solid blue">
+        <table>
+          <tr>
+            <td><label for="name">Name:</label></td>
+            <td>
+              <input
+                name="name1"
+                id="name"
+                required
+                maxlength="10"
+                pattern="[A-Za-z]{1,10}"
+              />
+            </td>
+            <td id="vnm"></td>
+          </tr>
+          <tr>
+            <td><label for="bd">Birth Date:</label></td>
+            <td><input type="date" id="bd" name="bd" /></td>
+          </tr>
+          <tr>
+            <td><label for="ea">Email Address:</label></td>
+            <td>
+              <input
+                type="text"
+                name="ea"
+                id="ea"
+                pattern="[a-zA-Z0-9].*@.*(.com)$"
+                required
+              />
+            </td>
+            <td>(Use format name@company.com)</td>
+          </tr>
+          <tr>
+            <td><label for="m">Gender:</label></td>
+            <td>
+              <input type="radio" name="g1" id="m" /><label for="m">Male</label
+              ><br /><input type="radio" name="g1" id="f" /><label for="f"
+                >Female</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><label for="ln">Lucky number:</label></td>
+            <td>
+              <input
+                type="number"
+                name="ln"
+                id="ln"
+                required
+                size="4"
+                min="1"
+                max="100"
+              />
+            </td>
+            <td>(A number between 1 and 100)</td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ff">Favorite Foods:</label>
+            </td>
+            <td>
+              <input type="checkbox" name="ff" id="pi" /><label for="pi"
+                >Pizza</label
+              ><br />
+              <input type="checkbox" name="ff" id="pa" /><label for="pa"
+                >Pasta</label
+              ><br />
+              <input type="checkbox" name="ff" id="c" /><label for="c"
+                >Chinese</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="submit" type="submit" value="submit">
+                Send Data
+              </button>
+            </td>
+          </tr>
+        </table>
+        <textarea
+          name="print"
+          id="print"
+          cols="30"
+          rows="10"
+          style="border: 0px"
+        ></textarea>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function dateandtime() {
+        var date = new Date();
+        str =
+          "<textarea rows=10 cols=150 style='color: red;border: 0;'> Today is " +
+          date.toLocaleDateString("en-us", { weekday: "long" }) +
+          ", " +
+          date.toLocaleDateString("en-us", { day: "numeric" }) +
+          " " +
+          date.toLocaleDateString("en-us", { month: "long", year: "numeric" }) +
+          ", Welcome, and ";
+        if (date.getHours() > 4 && date.getHours() < 12) {
+          str = str + "Good Morning";
+        }
+        if (date.getHours() >= 12 && date.getHours() < 16) {
+          str = str + "Good Afternoon";
+        }
+        if (date.getHours() >= 16 && date.getHours() < 21) {
+          str = str + "Good Evening";
+        }
+        if (
+          (date.getHours() >= 21 && date.getHours() < 24) ||
+          (date.getHours() >= 0 && date.getHours() < 4)
+        ) {
+          str = str + "Good Night";
+        }
+        str = str + " to You.\n Number of days left till end of year : ";
+        var date1 = new Date("01/01/"+(date.getFullYear()+1));
+        var date2 = new Date();
+        var str =
+          str +
+          Math.floor((date1.getTime() - date2.getTime()) / (3600 * 24 * 1000)) +
+          "</textarea>";
+        document.write(str);
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="dateandtime()">Get Everything</button>
+  </body>
+</html>

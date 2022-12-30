@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function displayTable() {
+        var number = document.getElementById("num").value;
+        var win = window.open("new window");
+        for (var i = 1; i < 11; i++) {
+          win.document.write(number + " * " + i + " = " + number * i + " <br>");
+        }
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="num1" id="num" onchange="displayTable()" /><label
+      for="num"
+      >Enter a number</label
+    >
+  </body>
+</html>

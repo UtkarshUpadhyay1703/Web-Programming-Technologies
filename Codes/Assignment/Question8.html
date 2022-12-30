@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+    </style>
+    <h1 style="color:1px solid black;">Group Members: Abc, Def, Ghi, Jkl, Mno, Pqr, Stu, Vwx, Yz</h1>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      Instructions to fill the form :
+      <div>(a) Form to be filled in English only.</div>
+      <div>(b) Fields marked by asterisk (<label for="l1" style="color: red">*</label>) are mandatory.</div>
+    </div><br>
+    <table style="border:1px solid black; border-collapse:collapse;">
+      <tr>
+        <td>
+          <label for="tech">Type of Problem:</label
+          ><label for="l1" style="color: red">*</label>
+        </td>
+        <td>
+          <select name="prob1" id="prob">
+            <option name="prob1" id="tech" value="tech">
+              Technical(e.g. website is down)
+            </option>
+            <option name="prob1" id="pdna" value="pdna">
+              Product do not available
+            </option>
+            <option value="missing" name="miss1" id="miss">
+              Missing Information about the product
+            </option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="uname">Username:</label
+          ><label for="l1" style="color: red">*</label>
+        </td>
+        <td><input type="text" name="uname1" id="uname" required /></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="email">Email:</label
+          ><label for="l1" style="color: red">*</label>
+        </td>
+        <td><input type="text" name="email1" id="email" required /></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="location">Location:</label
+          ><label for="l1" style="color: red">*</label>
+        </td>
+        <td><input type="text" name="location1" id="location" required /></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="phone">Phone:</label
+          ><label for="l1" style="color: red">*</label>
+        </td>
+        <td><input type="text" name="phone1" id="phone" /></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="phone">Phone:</label
+          >
+        </td>
+        <td><input type="text" name="phone1" id="phone" /></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="desc">Description of the problem:</label
+          >
+        </td>
+        <td>
+          <textarea name="desc1" id="desc" cols="30" rows="10" required></textarea>
+        </td>
+        </tr>
+        <tr>
+            <td>Notification of problem solved:</td>
+        <td>
+            <input type="radio" name="sol" id="solve"><label for="solve">Solved</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="sol" id="not"><label for="not">Not Solved</label>
+        </td>
+      </tr>
+    </table>
+    <button type="submit">Submit</button>
+  </body>
+</html>

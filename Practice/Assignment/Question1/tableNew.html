@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function table(){
+            var num1= parseInt(document.getElementById("in").value);
+            var win=window.open("new window");
+            for(var i=1;i<11;i++){
+                win.document.write(num1+" * "+i+" = "+num1*i+"<br>");
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="in" id="in"><br>
+    <button type="button" id="btn" name="btn" onclick="table()">Table</button>
+</body>
+</html>

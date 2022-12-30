@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../js/jquery.js"></script>
+    <script>
+      var arr = [];
+      $(document).ready(function () {
+        var i = 0;
+        $("#emp").blur(function () {
+          var nm = $("#emp").val();
+          arr.push(nm);
+          $("#emp").val("");
+          if (i === 5) {
+            displayarr(arr);
+          }
+          i++;
+        });
+        function displayarr(arr) {
+          alert("Inside Display");
+          newarr = arr.sort();
+          newarr.forEach((element) => {
+            document.write(element + "<br>");
+          });
+        }
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 12</title>
+  </head>
+  <body>
+    <label for="emp">Enter Employee Name</label
+    ><input type="text" name="emp1" id="emp" />
+  </body>
+</html>

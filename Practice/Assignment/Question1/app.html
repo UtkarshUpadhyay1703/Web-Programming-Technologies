@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var dateInterval;
+        function displayTime(){
+            var dt=new Date();
+            document.getElementById("mydiv").innerHTML=dt;
+        }
+        function start(){
+            dateInterval = setInterval(displayTime,1000);
+        }
+        function stop(){
+            alert("inside stop");
+            clearInterval(dateInterval);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="number" id="innum"  name="num"> -->
+    <button type="button" id="mybtn1" name="btn1" onclick="start()">Start</button>
+    <button typr="button" id="mybtn2" name="btn2" onclick="stop()">Stop</button>
+    <br>
+    <div id="mydiv">
+    </div>
+
+</body>
+</html>

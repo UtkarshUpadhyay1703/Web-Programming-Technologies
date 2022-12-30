@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/jquery.js"></script>
+    <script>
+    arr=[{empid:1, empname:'sah', salary:100000}, {empid:2, empname:'shu', salary:110000}, {empid:3, empname:'nis', salary:100400}, {empid:4, empname:'ayu', salary:130000}]
+    $(document).ready(function(){
+        str="<table border=1px> <tr><th>EmpId</th><th>EmpName</th><th>Salary</th></tr>"
+            arr.forEach(ob => {
+                str=str+"<tr><td>"+ob.empid+"</td><td>"+ob.empname+"</td><td>"+ob.salary+"</td></tr>"
+            });
+            str=str+"</table>";
+            document.write(str);
+    })
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <script src="../js/jquery.js"></script>
+    <script>
+        var i=0;
+        var arr=[];
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var str={empid:$('#empid').val(), empname:$('#empname').val(), salary:$('#salary').val()}
+                arr.push(str);
+                $('#empid').val("");
+                $('#empname').val("");
+                $('#salary').val("");
+                if(i===3){
+                    displayemp(arr);
+                }
+                i=i+1;
+            });
+            function displayemp(arr){
+                var str1="<table border=1px> <tr><th>EmpId</th><th>Emp Name</th><th>Salary</th></tr>"
+                    arr.forEach(ob =>{
+                        str1=str1+"<tr><td>"+ob.empid+"</td><td>"+ob.empname+"</td><td>"+ob.salary+"</td></tr>"
+                    });
+                    str1=str1+"</table>"
+                    document.write(str1);
+            }
+        })
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="emp" id="empid"><label for="empid">Enter EmpId</label><br>
+    <input type="text" name="emp" id="empname"><label for="empid">Enter Empname</label><br>
+    <input type="text" name="emp" id="salary"><label for="empid">Enter Salary</label><br>
+    <button type="button" name="btn1" id="btn" value="Submit">Submit</button>
+</body>
+</html>

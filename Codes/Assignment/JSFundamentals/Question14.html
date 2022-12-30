@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                let area=(parseFloat($('#length').val())*parseFloat($('#width').val()));
+                let parimeter=(parseFloat($('#length').val())+parseFloat($('#width').val()))*2;
+                document.write("Rectangle Area = "+area+"<br> Rectangle Parimeter = "+parimeter);
+            })
+            $('#radius').blur(function(){
+                let area=(Math.PI*Math.pow(parseFloat($('#radius').val()),2));
+                let parimeter=(2*Math.PI*parseFloat($('#radius').val()));
+                document.write("Circle Area = "+area+"<br> Circle Parimeter = "+parimeter);
+            })
+        })
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="length" id="length">Enter Length
+    <input type="text" name="width" id="width">Enter width
+    <button type="button" id="btn" value="rectangle">Rectangle</button><br><br><br>
+    <input type="text" name="radius" id="radius">Enter Radius
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/jquery.js"></script>
+    <script>
+        class Rectangle{
+            constructor(length,width){
+                this.length=length;
+                this.width=width;
+            }
+            area(){
+                alert(this.length);
+                let areaRectangle=(this.length*this.width);
+                document.write("Area = "+areaRectangle+"<br>");
+            }
+            parimeter(){
+                alert(this.length);
+                let parimeterRectangle=((this.length+this.width)*2);
+                document.write("Parimeter = "+parimeterRectangle);
+            }
+        }
+        class Circle{
+            constructor(radius){
+                this.radius=radius;
+            }
+            area=()=>{
+                alert(this.radius);
+                let areaCircle=(Math.PI*Math.pow(this.radius,2));
+                document.write("Area = "+areaCircle+"<br>");
+            }
+            parimeter=()=>{
+                let parimeterCircle=(2*Math.PI*this.radius);
+                document.write("Parimeter = "+parimeterCircle);
+            }
+        }
+        function rectangleAP(){
+            let R=new Rectangle(parseFloat($('#length').val()),parseFloat($('#width').val()));
+            R.area();
+            R.parimeter();
+        }
+        function circleAP(){
+            let C=new Circle(parseFloat($('#radius').val()));
+            C.area();
+            C.parimeter();
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question14</title>
+</head>
+<body>
+    <input type="text" name="length" id="length">Enter Length
+    <input type="text" name="width" id="width">Enter width
+    <button type="button" id="btn" value="rectangle" onclick="rectangleAP()">Rectangle</button><br><br><br>
+    <input type="text" name="radius" id="radius" onblur="circleAP()">Enter Radius
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(document).ready(function(){
+        alert("ready");
+          $('#wor').blur(function(){
+            alert()
+              var arr1=($('#wor').val()).split(" ");
+              alert(arr1.length)
+              for (var j=0;j<arr1.length;j++){
+                alert("infor");
+                var arr2=[];
+                alert(arr1[j]);
+              arr2=arr1[j].split("");
+              alert(arr2);
+              arr2.sort();
+              str=arr2.join("");
+              document.write(str+"<br>");
+            }
+          })
+      })
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="wor" id="wor" /><label for="wor">
+      Enter words with Spaces in between</label
+    >
+  </body>
+</html>
