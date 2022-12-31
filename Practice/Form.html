@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const checkName=()=>{
+            var name=document.getElementById("nm1").value;
+            if(name.trim().length==0){
+                document.getElementById("errname").innerHTML="Error";
+                return false;
+            }
+            document.getElementById("errname").innerHTML="";
+            return true;
+        }
+        const chaekGender=()=>{
+            var genarr=document.getElementsByName("g");
+            for(var i=0;i<genarr.length;i++){
+                if(genarr[i].checked){
+                    document.getElementById("gen").innerHTML="";
+                    return true;
+                }
+            }
+            document.getElementById("gen").innerHTML="Invalid";
+            return false;
+        }
+
+        const checkHobbies=()=>{
+            var arrhobbies=document.getElementsByName("Hobbies");
+            var count=0;
+            for(var i=0;i<arrhobbies.length;i++){
+                if(arrhobbies[i].checked){
+                    count++;
+                    if(count>1){
+                        document.getElementById("errhobb").innerHTML="";
+                        return true;
+                    }
+                }
+            }
+            document.getElementById("errhobb").innerHTML="Invalid";
+                        return false;
+        }
+
+        const datacheck=()=>{
+            var flag1=checkName();
+            alert(flag1);
+            var flag2=chaekGender();
+            var flag3=checkHobbies();
+            if(flag1 && flag2 && flag3){
+                return true;
+            }
+            return false;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form onsubmit="return datacheck()">
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="nm" id="nm1"></td><td id="errname"></td>
+            </tr>
+            <tr>
+                <th>mobile No</th>
+                <td><input type="number" name="mob" id="mob1"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>
+                    <label for="m">Male</label> <input type="radio" name="g" id="m">
+                    <label for="f">Female</label> <input type="radio" name="g" id="f">
+                </td><td id="gen"></td>
+            </tr>
+            <tr>
+                <th>Hobbies</th>
+                <td>
+                    <label for="Sleeping">Sleeping</label> <input type="checkbox" name="Hobbies" id="Sleeping1">
+                    <label for="Analysing">Analysing</label> <input type="checkbox" name="Hobbies" id="Analysing1">
+                    <label for="youtube">Youtube</label> <input type="checkbox" name="Hobbies" id="youtube1">
+                </td><td id="errhobb"></td>
+            </tr>
+            <tr><td>
+                <label id="location">Location</label>
+            </td><td>
+                <select name="location">
+                    <option value="1">----------select---------</option>
+                    <option value="pune">pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Mathura">Mathura</option>
+                </select>
+            </td>
+            </tr>
+            <tr><td>
+                <button type="submit" id="btn" name="btn" value="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <div id="mydiv1"></div>
+</body>
+</html>
