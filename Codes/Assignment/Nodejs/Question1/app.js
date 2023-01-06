@@ -10,7 +10,7 @@ app.use(bodeparser.urlencoded({ extended: false }));
 // server=http.createServer(function(req,resp){
 //     var q=url.parse(req.url,true);
 //     resp.writeHeader(200,{'content-type':'text/html'})
-    // switch(q)//q.query.
+// switch(q)//q.query.
 
 // });
 

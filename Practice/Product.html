@@ -11,6 +11,14 @@
             str+="</table>";
             document.getElementById("mydiv").innerHTML=str;
         }
+        addproduct=()=>{
+            var pid=document.getElementById("id1").value;
+            var pname=document.getElementById("name1").value;
+            var pprice=document.getElementById("price1").value;
+            var obj={pid,pname,pprice};
+            prodarr.push(obj);
+            display();
+        }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,5 +27,15 @@
 </head>
 <body onload="display()">
     <div id="mydiv"></div>
+    <form>
+        <Table>
+            <tr>
+                <th>Product id:</th><td><input type="number" name="id" id="id1"></td></tr>
+            <tr><th>Product name:</th><td><input type="text" name="name" id="name1"></td></tr>
+        <tr><th>Product price:</th><td><input type="number" name="price" id="price1"></td></tr>
+        <tr><td><button onclick="addproduct()">Add Product</button></td></tr>
+            </tr>
+        </Table>
+    </form>
 </body>
 </html>
