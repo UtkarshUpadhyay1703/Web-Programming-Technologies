@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        Submit=()=>{
+            var Name=document.getElementById("name").value;
+            var genderarr=document.getElementsByName("status");
+            var gender;
+            for(let i=0;i<genderarr.length;i++){
+                if(genderarr[i].checked){
+                    gender=genderarr[i].value;
+                    break;
+                }
+            }
+            var text=document.getElementById("address").value;
+            var email=document.getElementById("email").value;
+            var choice=document.getElementById("choice").value;
+            var showarr=document.getElementsByName("same");
+
+            for(var i=0;i<showarr.length;i++){
+                if(showarr[i].checked){
+                if(showarr[i].value=="sameWindow"){
+                    var output=`<h2>Name = ${Name} </h2> <h4>Gender = ${gender} </h4> <h4>Address  = ${text} </h4> </h4> <h4>Email id = ${email} </h4> <h4>choice = ${choice} </h4> `
+                    document.getElementById("mydiv").innerHTML=output;
+                }
+                
+                if(showarr[i].value=="diffWindow"){
+                    var win=window.open("new Window");
+                    win.document.write(`<h2>Name = ${Name} </h2> <h4>Gender = ${gender} </h4> <h4>Address  = ${text} </h4> </h4> <h4>Email id = ${email} </h4> <h4>choice = ${choice} </h4> `);
+                }
+            }
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body style="background-color: rgb(151, 251, 1);">
+    <form>
+    <fieldset style="border: 2px solid black; background-color: aqua; width: 50%;">
+        <fieldset style="background-color: red; margin-left: 50px; margin-right: 50px; text-align: center;">
+            ABC Enterprises
+        </fieldset>
+        <br>
+    <fieldset style="flex-direction: column; float: left; border: 2px solid  black; width: 33%; height: 300px;">
+    Welcome to Registration system</fieldset>
+    <fieldset style="flex-direction: column; float: right; width: 50%;">
+        <table>
+            <tr>
+                <th><label for="name">Name:</label></th>
+                    <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <th><label for="Male">Gender:</label></th>
+                    <td><input type="radio" name="status" id="Male" value="Male">Male</td>
+                    <td><input type="radio" name="status" id="Female" value="Female">Female</td>
+            </tr>
+            <tr>
+                <th><label for="address"> Address</th></label>
+                <td><textarea name="address" id="address" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <th><label for="email">Email id:</label></th>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <th>Choice</th>
+                <td><select name="choice" id="choice">
+                    <!-- <option value=""></option> -->
+                    <option value="newsletter">newsletter</option>
+                    <option value="magzines">magzines</option>
+                    <option value="blogs">blogs</option>
+                    <option value="paper">paper</option>
+                </select></td>
+            </tr>
+        </table>
+    </fieldset>
+    <br><br><br><br><br><br>
+    <fieldset style="border: 0;">
+    <input type="radio" name="same" id="same" value="sameWindow">Display below form
+    <input type="radio" name="same" id="diffsame" value="diffWindow">Display on diff window form
+</fieldset>
+<fieldset style="border: 0; margin-left: 250px;">
+    <button type="button" onclick="Submit()">Submit</button>
+    <button type="reset">clear</button>
+</fieldset>
+</fieldset>
+</form>
+<div id="mydiv"> 
+
+</div>
+</body>
+</html>

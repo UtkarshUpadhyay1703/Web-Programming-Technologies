@@ -46,7 +46,7 @@ router.post("/employee",(req,resp)=>{
     });
 })
 
-router.put("/employee/Update:empid",(req,resp)=>{
+router.put("/employee/:empid",(req,resp)=>{
     Emp.findOne({empid:req.body.empid},(err,doc=>{
         if(err){
             resp.status(500).send("not updated");
@@ -55,7 +55,7 @@ router.put("/employee/Update:empid",(req,resp)=>{
             doc.empid=req.body.empid;
             doc.ename=req.body.ename;
             doc.sal=req.body.sal;
-            Emp.save(doc,(err,data)=>{
+            doc.save((err,data)=>{
                 if(err){
                     resp.status(500).send("not updated");
                 }
@@ -68,7 +68,7 @@ router.put("/employee/Update:empid",(req,resp)=>{
     }));
 })
 
-router.delete("/employee/Delete:empid",(req,resp)=>{
+router.delete("/employee/:empid",(req,resp)=>{
     Emp.remove({empid:req.body.empid},(err,data)=>{
         if(err){
             resp.status(500).send("Not deleted");
