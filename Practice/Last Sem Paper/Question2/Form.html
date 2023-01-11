@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // var arr=[{"Name":"","Address":"","Hobbies":""}];
+        var arr=[];
+        var Add=()=>{
+            var Name=document.getElementById("Name").value;
+            var Address=document.getElementById("Address").value;
+            var Hobbies=document.getElementById("Hobbies").value;
+            // arr.push({"Name":"${Name}","Address":"${Address}","Hobbies":"${Hobbies}"});
+            arr.push({Name:`${Name}`,Address:`${Address}`,Hobbies:`${Hobbies}`});
+            Display();
+        }
+        var Display=()=>{
+            var print=document.getElementById("mydiv");
+            var str;
+            arr.forEach((stud)=>{
+                // str+=`Name : ${Name} Address : ${Address} Hobbies : ${Hobbies} <br/`
+            str+="Name : " +Name +"Address : "+Address +"Hobbies : "+Hobbies +"<br/>"
+            })
+            print=str;
+        }
+        
+        // var Color1=()=>{
+        //     document.getElementById("Name").style.backgroundColor='yellow';
+        // }
+        // var Color2=()=>{
+        //     document.getElementById("Address").style.backgroundColor='yellow';
+        // }
+        // var Color3=()=>{
+        //     document.getElementById("Hobbies").style.backgroundColor='yellow';
+        // }
+        var validate=()=>{
+            var name=document.getElementById("Name").value;
+            if(name.trim().length<6){
+                return true;
+            }
+            alert("Name should be less than 6 characters");
+            return false;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body style="background-color: aqua;">
+    <div>
+    <form action="/yoyo" onsubmit="return validate()">
+        
+        Name: <input type="text" name="Name" id="Name" onclick="Color()" ><br><br><br>
+        Address: <input type="text" name="Address" id="Address" onclick="Color()"><br><br><br>
+        Hobbies: <input type="text" name="Hobbies" id="Hobbies" onclick="Color()"><br><br><br>
+        <!-- <iframe frameborder="0">dfghj</iframe> -->
+        <frameset>
+        <frameset> <button type="submit" onclick="Add()">Add Submit</button></frameset>
+        <frameset> <button type="submit" oncl>Display</button></frameset>
+    </frameset>
+    <!-- <fieldset >
+        <fieldset style=" width: 100px; align-self: left;"> <button type="submit" onclick="Add()">Add Submit</button></fieldset>
+        <fieldset style="width:25%; align-self: center;"> <button type="submit" oncl>Display</button></fieldset>
+        </fieldset> -->
+    </form>
+</div>
+<div id="mydiv">
+
+</div>
+</body>
+</html>

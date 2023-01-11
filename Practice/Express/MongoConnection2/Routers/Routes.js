@@ -55,7 +55,7 @@ Router.post("/employee",(req,resp)=>{
 
 //by this we can update the existing employee
 Router.put("/employee/:empid",(req,resp)=>{
-    Emp.findOne({empid:req.body.empid},(err,doc)=>{
+    Emp.findOne({empid:req.params.empid},(err,doc)=>{
         if(err){
             resp.status(500).send("error in id ");
         }
