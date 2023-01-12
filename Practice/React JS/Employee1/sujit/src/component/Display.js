@@ -7,6 +7,7 @@ const Display=(props)=>{
     }
     return(
         <div>
+            <h2>Table Display</h2>
             <table>
                 <tr>
                     <thead>

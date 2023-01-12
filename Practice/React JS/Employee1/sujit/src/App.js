@@ -4,11 +4,14 @@ import {useState} from "react";
 import Employee from './component/Employee';
 import Display from "./component/Display";
 function App() {
-  let [emparr,setemparr]=useState([{Id:"",Name:"",Branch:""}]);
+  const [emparr,setemparr]=useState([]);
 
-  let EmployeeAdd=(ob)=>{
+  const EmployeeAdd=(ob)=>{
+    console.log("in add");
+    alert(ob.Id+" "+ob.Name);
+    let newarr = [...emparr,{...ob}]
     // alert(JSON.stringify(ob));
-    setemparr([...emparr,{...ob}]);
+    setemparr(newarr);
   }
 
 

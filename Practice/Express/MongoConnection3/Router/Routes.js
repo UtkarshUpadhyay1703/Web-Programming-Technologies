@@ -69,7 +69,7 @@ Router.put("/student/:Id",(req,resp)=>{
 });
 
 Router.delete("/student/:Id",(req,resp)=>{
-    Stud.remove({Id:req.body.Id},(err,data)=>{
+    Stud.remove({Id:req.params.Id},(err,data)=>{
         if(err){
             console.log("error in delete");
             resp.status(500).send("error in delete method");

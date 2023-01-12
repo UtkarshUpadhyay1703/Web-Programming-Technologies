@@ -1,12 +1,13 @@
 import { useState } from "react";
 
 const Employee=(props)=>{
-    let [empob,setempob]=useState({Id:"",Name:"",Branch:""});
+    const [empob,setempob]=useState({Id:"",Name:"",Branch:""});
     var Change=(event)=>{
         let {name,value}=event.target
         setempob({...empob,[name]:value});
     }
-    var Add=(empob)=>{
+    var Add=(event)=>{
+        //
         // console.log(JSON.parse(JSON.stringify(empob)));
         // alert(empob.Id);
         props.AddEmp(empob);
